@@ -1,0 +1,296 @@
+/* css/style.css */
+
+/* Reset rápido */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15vw;
+    min-width: 200px;
+    height: 100vh;
+    background: #161b22;
+    border-right: 2px solid #58a6ff;
+    padding: 1rem;
+}
+
+.sidebar h4 {
+    color: #58a6ff;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.sidebar img {
+  width: 80%;          /* o el ancho que prefieras */
+  height: auto;
+  display: block;      /* convierte la imagen en bloque */
+  margin: 0 auto 2rem; /* 0 arriba, auto a los lados, 2rem abajo */
+  object-fit: contain;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: #c9d1d9;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background .2s, color .2s;
+}
+.sidebar a:hover {
+  background: #58a6ff22;
+  color: #58a6ff;
+}
+.sidebar a i {
+  margin-right: 0.5rem;
+  color: #58a6ff;
+}
+
+/* Contenido principal */
+.content {
+    flex-grow: 1;              /* ← esto hace que ocupe el resto del espacio */
+    height: 100vh;
+    background: #161b22;
+    padding: 0rem;
+    padding-left: 0.2rem;
+    padding-top: 0.3rem;
+    padding-right: 0;
+    overflow-y:auto;          /* si quieres scroll interno */
+    margin: 0;
+}
+
+
+/* Paneles */
+.panel {
+    background: #161b22cc; /* semitransparente */
+    border: 1px solid #58a6ff;
+    border-radius: 7px;
+    padding: 0.3rem 0.3rem;  /* 1rem arriba y abajo, 2rem izquierda y derecha */
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #58a6ff55;
+}
+.panel h2,
+.panel h3,
+.panel h5 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.panel p {
+  line-height: 1.5;
+}
+.panel img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #58a6ff33;
+}
+.panel-grafico {
+    width: 100%;
+    height: 40vh;  /* Ajusta según necesites */
+    background: #161b22cc; /* semitransparente */
+    border: 1px solid #58a6ff;
+    border-radius: 4px;
+    padding: 0rem 0rem 0rem 0rem;  /* 1rem arriba y abajo, 2rem izquierda y derecha */
+    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+.panel-grafico iframe {
+  width: 100%;
+  height: 90%;
+  border: none;
+  display: block;
+}
+
+.texto-grande {
+  font-size: 20px;
+}
+
+.texto-pequeño {
+  font-size: 12px;
+}
+.row {
+  display: flex;
+  gap: 0rem;           /* separación entre elementos */
+  margin: 0;
+  padding: 0;
+  align-items: center;  /* o center / stretch según lo que quieras */
+}
+.columna-imagenes {
+  display: flex;
+  flex-direction: column;  /* columna vertical */
+  gap: 0.3rem;               /* espacio entre imágenes */
+  align-items: left;     /* centra horizontalmente (opcional) */
+  height: 100dvh;
+  width: 20dvw;
+}
+
+.row img {
+  width: 16.6vw;              /* o 100%, o un tamaño fijo */
+  height: auto;
+  border: 0px solid #58a6ff;
+  border-radius: 8px;
+}
+.bloque-imagenes {
+  margin: 1rem 0;
+}
+
+.subtitulo {
+  background-color: #1f2937;   /* fondo oscuro */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-left: 4px solid #58a6ff;  /* decorativo opcional */
+  margin-bottom: 0.5rem;
+  width: fit-content; /* solo ocupa lo que el texto necesita */
+  border-radius: 4px;
+}
+.descripcion {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-left: 4px solid #58a6ff;  /* decorativo opcional */
+  margin-bottom: 0.5rem;
+  width: fit-content; /* solo ocupa lo que el texto necesita */
+  border-radius: 4px;
+}
+
+.panel-imagenes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.panel-imagenes img {
+  width: 15dvw;
+  height: auto;
+  border: 1px solid #58a6ff;
+  border-radius: 6px;
+}
+
+.contenedor-arbol {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #1a3c34;
+  display: flex;
+  justify-content: center;
+}
+
+.nodo {
+  position: absolute;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: #112d27;
+  border: 2px solid;
+  min-width: 200px;
+  text-align: left;
+}
+
+/* Colores por nivel */
+/* Colores por nivel */
+.nivel-1 { border-color: #1f6feb; background-color: #0d1117; }
+.nivel-2 { border-color: #10b981; background-color: #112d27; }
+.nivel-3 { border-color: #8b5cf6; background-color: #1b1032; }
+
+.flechas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.columna-tabla {
+  padding: 1rem;
+  background-color: #0d1117;
+  border: 1px solid #58a6ff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px; /* o el ancho que desees */
+}
+
+.titulo-tabla {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.tabla-estilizada {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+.tabla-estilizada thead {
+  background-color: #161b22;
+  border-bottom: 2px solid #58a6ff;
+}
+
+.tabla-estilizada th, .tabla-estilizada td {
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.tabla-estilizada tbody tr:nth-child(even) {
+  background-color: #1e2530;
+}
+
+.tabla-estilizada tbody tr:hover {
+  background-color: #2a3240;
+}
+
+.tabla-resaltada {
+  background-color: #f59e0b;  /* naranja */
+  color: black;
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #58a6ff33;
+  margin-top: 1rem;
+}
+ul {
+  list-style-type: square;  /* disc, circle, square, none */
+  padding-left: 1.5rem;
+}
+
+ol {
+  list-style-type: decimal; /* decimal, lower-roman, upper-alpha, etc. */
+}
+
+/* Responsive: sidebar arriba en móvil */
+@media(max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
+
