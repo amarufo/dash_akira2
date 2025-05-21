@@ -167,10 +167,11 @@ body {
 }
 
 .panel-imagenes {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;             /* ← permite que las imágenes pasen a la siguiente fila */
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .panel-imagenes img {
