@@ -134,10 +134,10 @@ body {
 }
 
 .row img {
-  width: 16.6vw;              /* o 100%, o un tamaño fijo */
+  width: 10dvw;              /* o 100%, o un tamaño fijo */
   height: auto;
   border: 0px solid #58a6ff;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 .bloque-imagenes {
   margin: 1rem 0;
@@ -160,6 +160,7 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   border-left: 4px solid #58a6ff;  /* decorativo opcional */
+  border-right: 4px solid #58a6ff;  /* decorativo opcional */;
   margin-bottom: 0.5rem;
   width: fit-content; /* solo ocupa lo que el texto necesita */
   border-radius: 4px;
@@ -183,7 +184,6 @@ body {
   position: relative;
   width: 100%;
   height: 600px;
-  background: #1a3c34;
   display: flex;
   justify-content: center;
 }
@@ -235,17 +235,17 @@ body {
 .tabla-estilizada {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  color: #d0d0d0;
+  font-size: 0.86rem;
+  color: #ffffff;
 }
 
 .tabla-estilizada thead {
-  background-color: #161b22;
-  border-bottom: 2px solid #58a6ff;
+  background-color: #05426b;
+  border-bottom: 2px solid #000000;
 }
 
 .tabla-estilizada th, .tabla-estilizada td {
-  padding: 0.6rem;
+  padding: 0.2rem;
   text-align: left;
 }
 
