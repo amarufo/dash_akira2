@@ -168,8 +168,9 @@ body {
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  border-left: 4px solid #58a6ff;  /* decorativo opcional */
-  border-right: 4px solid #58a6ff;  /* decorativo opcional */;
+  background-color: #0565d3;
+  border-left: 10px solid #0565d3;  /* decorativo opcional */
+  border-right: 10px solid #0565d3;  /* decorativo opcional */;
   margin-bottom: 0.5rem;
   width: fit-content; /* solo ocupa lo que el texto necesita */
   border-radius: 4px;
@@ -197,7 +198,21 @@ body {
 }
 
 .panel-imagenes2 img {
-  width: 49%;
+  width: 45%;
+  height: auto;
+  border: 1px solid #58a6ff;
+  border-radius: 6px;
+}
+.panel-imagenes3 {
+    display: flex;
+    flex-wrap: wrap;             /* ← permite que las imágenes pasen a la siguiente fila */
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.panel-imagenes3 img {
+  width: 18vw;
   height: auto;
   border: 1px solid #58a6ff;
   border-radius: 6px;
